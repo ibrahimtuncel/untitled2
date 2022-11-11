@@ -11,6 +11,7 @@ public class jsonPlaceHolderBaseUrl {
     @Before //eger metodun userinde before annotation eklenince bu methot her bir tes metodundan önce calisir.
     public void setUp() {
         spec = new RequestSpecBuilder().setBaseUri("https://jsonplaceholder.typicode.com").build();
+        System.out.println();
         //constructor kuruldu
 
     }
