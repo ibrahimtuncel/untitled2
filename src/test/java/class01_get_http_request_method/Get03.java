@@ -1,7 +1,6 @@
 package class01_get_http_request_method;
 
-import Base_url.HerOkuAppBaseUrl;
-import Base_url.jsonPlaceHolderBaseUrl;
+import Base_url.JsonPlaceHolderBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
@@ -10,7 +9,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItem;
 
-public class Get03 extends jsonPlaceHolderBaseUrl {
+public class Get03 extends JsonPlaceHolderBaseUrl {
 
     /*
    Given

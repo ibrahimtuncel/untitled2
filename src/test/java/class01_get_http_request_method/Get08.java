@@ -1,6 +1,6 @@
 package class01_get_http_request_method;
 
-import Base_url.jsonPlaceHolderBaseUrl;
+import Base_url.JsonPlaceHolderBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
-public class Get08 extends jsonPlaceHolderBaseUrl {
+public class Get08 extends JsonPlaceHolderBaseUrl {
     /*
         APi teste en buyuk zorluk yada handikap data type'leridir
     1) Java,  Object( non-primitive), Maps ve Primitive data typleri kullanir
