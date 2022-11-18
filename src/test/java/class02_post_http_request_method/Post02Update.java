@@ -3,7 +3,6 @@ package class02_post_http_request_method;
 import Base_url.JsonPlaceHolderBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.junit.Test;
 import test_data.JsonPlaceHolderTestData;
 
@@ -12,7 +11,6 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
-@JsonIgnoreProperties(value={"handler","hibernateLazyInitializer","FieldHandler"})
 public class Post02Update extends JsonPlaceHolderBaseUrl {
     /*
            Given
@@ -48,13 +46,13 @@ public class Post02Update extends JsonPlaceHolderBaseUrl {
         Response response = given().
                 spec(spec).auth().basic("admin", "1234").
                 contentType(ContentType.JSON).
-                body(beklenenData).when().
+                body(beklenenDataMap).when().
                 post("/{first}");
         response.prettyPrint();
 
         beklenenDataMap.put("Status Code", 201);
         // 4. adim: assertion yap
-        Map<String, Object> actualData = response.as(HashMap.class);// De-serialization
+        Map<String, Object> actualData = response.as(HashMap.class);/* De-serialization */
 
         System.out.println(actualData);
 
