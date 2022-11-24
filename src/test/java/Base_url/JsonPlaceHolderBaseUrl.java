@@ -8,7 +8,7 @@ public class JsonPlaceHolderBaseUrl {
 
     protected RequestSpecification spec;
 
-    @Before //eger metodun userinde before annotation eklenince bu methot her bir tes metodundan önce calisir.
+    @Before //eger metodun userinde before annotation eklenince bu methot her bir test metodundan önce calisir.
     public void setUp() {
         spec = new RequestSpecBuilder().setBaseUri("https://jsonplaceholder.typicode.com").build();
         System.out.println();

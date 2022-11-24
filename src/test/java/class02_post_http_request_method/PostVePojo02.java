@@ -4,7 +4,7 @@ package class02_post_http_request_method;
 import Base_url.HerOkuAppBaseUrl;
 import class06_pojos.BookingDatesPojo;
 import class06_pojos.BookingPojo;
-import class06_pojos.HerOkuAppPostResponsBodyPojo;
+import class06_pojos.HerOkuAppPostResponseBodyPojo;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
@@ -61,7 +61,7 @@ And
         Response response = given().spec(spec).contentType(ContentType.JSON).body(requestBody).when().post("/{first}");
         response.prettyPrint();
 
-        HerOkuAppPostResponsBodyPojo actualData= response.as(HerOkuAppPostResponsBodyPojo.class);
+        HerOkuAppPostResponseBodyPojo actualData= response.as(HerOkuAppPostResponseBodyPojo.class);
         System.out.println(actualData);
 
         //4. adim: Assertion yap

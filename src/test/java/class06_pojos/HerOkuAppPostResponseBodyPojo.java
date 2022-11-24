@@ -2,16 +2,16 @@ package class06_pojos;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class HerOkuAppPostResponsBodyPojo {
+public class HerOkuAppPostResponseBodyPojo {
 
     private Integer bookingid;
     private BookingPojo booking;
 
-    public HerOkuAppPostResponsBodyPojo(Integer bookingid, BookingPojo booking) {
+    public HerOkuAppPostResponseBodyPojo(Integer bookingid, BookingPojo booking) {
         this.bookingid = bookingid;
         this.booking = booking;
     }
-    public HerOkuAppPostResponsBodyPojo() {
+    public HerOkuAppPostResponseBodyPojo() {
     }
 
     public Integer getBookingid() {

@@ -35,7 +35,13 @@ public class JsonPlaceHolderTestData {
             expectedData.put("title", title);
 
         return expectedData;
+    }
 
+    // objectmapper class icin olustur
+    public String expectedDataInString(Integer userId, String title, Boolean completed){
+        String expectedData =  "{"+"\"userId\":" + userId + "," + "\"title\":" + "\"" + title +
+                "\"" + "," + "\"completed\":" + completed + "};";
+        return expectedData;
     }
 
 }

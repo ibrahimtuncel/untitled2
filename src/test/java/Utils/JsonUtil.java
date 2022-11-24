@@ -26,15 +26,15 @@ public class JsonUtil {
 
     //2. method: Java Object Json data ya cevirmek icin kullanilir ==> Serialization
 
-    public static String  convertJavaToJson(Object obj){
-        String jsonResult = null;
+    public static String  javayiJsonaCevir(Object obj){
+        String jsonSonuc = null;
 
         try {
-            jsonResult =  mapper.writeValueAsString(obj);
+            jsonSonuc =  mapper.writeValueAsString(obj);
         } catch (IOException e) {
             System.out.println("Json object could not be converted to Java "+ e.getMessage());
         }
-        return jsonResult;
+        return jsonSonuc;
 
     }
 

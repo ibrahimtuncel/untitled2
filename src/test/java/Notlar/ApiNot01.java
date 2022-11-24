@@ -29,21 +29,25 @@ public class ApiNot01 {
          1) Insert -->  url
          2) update -->  url
          3) Delete -->  url
-         4) Delete -->  url
+         4) Read7get -->  url
 
       Bu islemler icin URL'e ihtiyacimiz var URL'lere 'Endpoint' denir
        orn: Guncelleme islemi icin 10 URL, datayi okumak icin 20 URL olabilir
 
       Insert (olustur) islemleri icin birden fazla URL ihtiyacimiz var
-      Neden? Cunku bazen database'e ogrenci, ebeveyn, ders notlari eklemek isteriz, bu yuzden her biri icin ayri ayri URL ihtiyacimiz var
+      Neden? Cunku bazen database'e ogrenci, ebeveyn, ders notlari eklemek isteriz, bu yuzden her biri icin
+      ayri ayri URL ihtiyacimiz var
        Farkli her insert (olustur) islemi icin, birer tane endpoint(URL) olusturulur.
 
                ---Mulakat Sorusu---Atomasyon Tester olarak ne yaparsiniz
-    Atomasyon Tester olarak butun ENDPOINT'lar icin farkli senaryolar deneyerek beklenen sonucu verdigini test/check ederiz
-    Genellikle bu senaryolar gereksinim formunda (requirement document) size verilir (ama bazen bunlarin disinda da senaryo denemeniz lazim)
+    Atomasyon Tester olarak butun ENDPOINT'lar icin farkli senaryolar deneyerek beklenen sonucu verdigini
+    test/check ederiz
+    Genellikle bu senaryolar gereksinim formunda (requirement document) size verilir (ama bazen bunlarin
+    disinda da senaryo denemeniz lazim)
       ----------------------------------------------------------------------------
    ==> Swagger dokumanlari API icin siklikla kullanilir. -> https://petstore.swagger.io/
-    Swagger dokumanlarini butun detaylari icin check edilir.Dokumana gore test case olustur, manuel olarak test et sonra otomasyon icin kod yaz
+    Swagger dokumanlarini butun detaylari icin check edilir.Dokumana gore test case olustur,
+    manuel olarak test et sonra otomasyon icin kod yaz
 
             ==> HTTP Request Methodlari:
     1) GET method: DataBase'den data almak/okumak icin kullanilir. (Read --> R in CRUD)
@@ -74,11 +78,14 @@ public class ApiNot01 {
             1XX :  request alindi ve surec devam ediyor.
            2XX : islem basarili bir sekilde alindi, anlasildi ve kabul edildi
                    (Herseyin OK oldugunu API icin bir problem olmadigini ifade eder. Beklenen statu kodudur
-            3XX : requestin tamamlanmasi icin daha ileri bir islem gerekli. (Bu kodu alirsaniz, lutfen request'e tekrar bakiniz, bakin bir sey eksik mi?)
-                    (Bu statu kodunu alirsaniz, bir seyleri yanlis yaptiginizi anlayin, manajere veya takim liderine soylemeyin)
+            3XX : requestin tamamlanmasi icin daha ileri bir islem gerekli. (Bu kodu alirsaniz, lutfen request'e
+            tekrar bakiniz, bakin bir sey eksik mi?)
+                    (Bu statu kodunu alirsaniz, bir seyleri yanlis yaptiginizi anlayin, manajere veya takim
+                    liderine soylemeyin)
             4XX : Request'in dogru olmayan bir sintaks icerdigi ve islemin tamamlanamayacagini ifade eder.
                     (Eger bunu alirsaniz, requesti tekrar kontrol edin)
-            5XX : Server'in coktugunu ifade eder. (Sunu yapin: "Ben 5XX error aliyorum, baska bu problemi yasayan var mi"
+            5XX : Server'in coktugunu ifade eder. (Sunu yapin: "Ben 5XX error aliyorum, baska bu problemi
+            yasayan var mi"
                     Eger bu kodu alirsaniz serverin duzeltilmesi lazim sizin yapacaginiz bir sey yoktur)
 
             *** NOTE:***

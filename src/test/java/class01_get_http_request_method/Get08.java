@@ -15,10 +15,10 @@ public class Get08 extends JsonPlaceHolderBaseUrl {
         APi teste en buyuk zorluk yada handikap data type'leridir
     1) Java,  Object( non-primitive), Maps ve Primitive data typleri kullanir
         API ise XML, Json gibi formatlari kullanir
-        JAva ve API farkli data type kullanir dolayisiyla abunlarin birbirleriyle iletisim kurmasi icin
+        JAva ve API farkli data type kullanir dolayisiyla bunlarin birbirleriyle iletisim kurmasi icin
         birbirlerini anlayacak formata getirilmesi lazim. Aksi halde iletisim olmaz
         --Birbirlerini anlamalari icin yapacagimiz iki secenek var---
-        i) Data type'i Json formatinda Java object formatina ceviririz ==> De-Serialization
+        i) Data type'i Json formatindan Java object formatina ceviririz ==> De-Serialization
         ii)  Data type'i Java object'ten Json formatina ceviririz ==> Serialization
         De-Serialization ve Serialization icin 2 tane secenek vardir
         a) Gson -- Google olusurur
@@ -58,7 +58,8 @@ public class Get08 extends JsonPlaceHolderBaseUrl {
         expectedData.put("Via", "1.1 vegur");
         expectedData.put("Server", "cloudflare");
 
-        System.out.println(expectedData);//{Server=cloudflare, Status Code=200, completed=false, title=quis ut nam facilis et officia qui, userId=1, Via=1.1 vegur}
+        System.out.println(expectedData);//{Server=cloudflare, Status Code=200, completed=false,
+        // title=quis ut nam facilis et officia qui, userId=1, Via=1.1 vegur}
 
         //3. adim: reguest gonder, response al
         Response response = given().spec(spec).when().get("/{first}/{second}");

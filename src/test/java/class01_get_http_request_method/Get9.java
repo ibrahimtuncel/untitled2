@@ -45,7 +45,7 @@ public class Get9 extends HerOkuAppBaseUrl {
         System.out.println(expectedBookingDates);
 
         Map<String, Object> expectedData = new HashMap<>();
-        expectedData.put("firstname", "Dane");
+        expectedData.put("firstname", "Sofia");
         expectedData.put("lastname", "Colque");
         expectedData.put("totalprice", 111);
         expectedData.put("depositpaid", true);

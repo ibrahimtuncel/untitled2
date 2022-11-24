@@ -46,7 +46,7 @@ public class Get07 extends JsonPlaceHolderBaseUrl {
 
         List<Integer> idList =   json.getList("findAll{it.id>190}.id"); // groovy language
         /*
-        it -> icinde bulundugunuzJson datadaki id temsil eder
+        it -> icinde  bulunulan Json datadaki id temsil eder
         this.name = icinde bulundugumuz sinifi degiskeni (name) temsil eder
          */
         System.out.println(idList); //[191, 192, 193, 194, 195, 196, 197, 198, 199, 200]
